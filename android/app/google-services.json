@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "67044824401",
+    "project_id": "drivers-app-fa1e1",
+    "storage_bucket": "drivers-app-fa1e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:67044824401:android:55239bf52cf7e398d7af70",
+        "android_client_info": {
+          "package_name": "com.lehling.driversapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "67044824401-qpqgqcdg2c8vdkd77utr5l9iem6ce55n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8lwOKmBxomHaAsTwz16WMBpmb2E0k54s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "67044824401-qpqgqcdg2c8vdkd77utr5l9iem6ce55n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
