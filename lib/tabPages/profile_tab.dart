@@ -19,18 +19,22 @@ class _ProfileTabPageState extends State<ProfileTabPage>
   Widget build(BuildContext context)
   {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-
+            Image.asset(
+              'images/profile.png',
+              height: 100,
+              width: 100,
+            ),
             //name
             Text(
               onlineDriverData.name!,
               style: const TextStyle(
                 fontSize: 50.0,
-                color: Colors.white,
+                color: Colors.black,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -40,8 +44,9 @@ class _ProfileTabPageState extends State<ProfileTabPage>
                titleStarsRating + " driver",
               style: const TextStyle(
                 fontSize: 18.0,
-                color: Colors.grey,
+                color: Colors.black54,
                 fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.italic
               ),
             ),
 
@@ -49,7 +54,7 @@ class _ProfileTabPageState extends State<ProfileTabPage>
               height: 20,
               width: 200,
               child: Divider(
-                color: Colors.white,
+                color: Colors.black38,
                 height: 2,
                 thickness: 2,
               ),
@@ -88,7 +93,7 @@ class _ProfileTabPageState extends State<ProfileTabPage>
                 primary: Colors.redAccent,
               ),
               child: const Text(
-                "Logout",
+                "LOG OUT",
                 style: TextStyle(color: Colors.white),
               ),
             )

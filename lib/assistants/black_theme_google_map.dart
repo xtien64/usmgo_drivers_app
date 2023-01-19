@@ -1,6 +1,4 @@
 
-
-
 blackThemeGoogleMap(newGoogleMapController)
 {
   newGoogleMapController!.setMapStyle('''

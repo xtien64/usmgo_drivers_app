@@ -26,9 +26,6 @@ class NewTripScreen extends StatefulWidget
   State<NewTripScreen> createState() => _NewTripScreenState();
 }
 
-
-
-
 class _NewTripScreenState extends State<NewTripScreen>
 {
   GoogleMapController? newTripGoogleMapController;
@@ -190,7 +187,7 @@ class _NewTripScreenState extends State<NewTripScreen>
     if(iconAnimatedMarker == null)
     {
       ImageConfiguration imageConfiguration = createLocalImageConfiguration(context, size: const Size(2, 2));
-      BitmapDescriptor.fromAssetImage(imageConfiguration, "images/car.png").then((value)
+      BitmapDescriptor.fromAssetImage(imageConfiguration, "images/car_logo.png").then((value)
       {
         iconAnimatedMarker = value;
       });

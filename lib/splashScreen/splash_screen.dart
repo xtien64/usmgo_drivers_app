@@ -1,11 +1,10 @@
 import 'dart:async';
-
 import 'package:drivers_app/authentication/login_screen.dart';
 import 'package:drivers_app/authentication/signup_screen.dart';
 import 'package:drivers_app/global/global.dart';
 import 'package:drivers_app/mainScreens/main_screen.dart';
 import 'package:flutter/material.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 
 class MySplashScreen extends StatefulWidget
 {
@@ -48,25 +47,29 @@ class _MySplashScreenState extends State<MySplashScreen>
   {
     return Material(
       child: Container(
-        color: Colors.black,
+        color: Colors.white,
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-
-              Image.asset("images/logo1.png"),
-
+              Image.asset("images/driver.png"),
               const SizedBox(height: 10,),
-
-              const Text(
-                "Uber & inDriver Clone App",
-                style: TextStyle(
-                  fontSize: 24,
-                  color: Colors.white,
+              Text(
+                "USM GO",
+                style: GoogleFonts.aBeeZee(
+                  fontSize: 45,
+                  color: Colors.black,
                   fontWeight: FontWeight.bold
                 ),
               ),
-
+              Text(
+                "Your Carpooling App",
+                style: GoogleFonts.josefinSans(
+                    fontSize: 25,
+                    color: Colors.black54,
+                    fontStyle: FontStyle.italic
+                ),
+              ),
             ],
           ),
         ),

@@ -3,7 +3,7 @@ import 'package:drivers_app/infoHandler/app_info.dart';
 import 'package:drivers_app/mainScreens/trips_history_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 
 class EarningsTabPage extends StatefulWidget {
   const EarningsTabPage({Key? key}) : super(key: key);
@@ -11,8 +11,6 @@ class EarningsTabPage extends StatefulWidget {
   @override
   _EarningsTabPageState createState() => _EarningsTabPageState();
 }
-
-
 
 class _EarningsTabPageState extends State<EarningsTabPage> {
   @override
@@ -24,29 +22,30 @@ class _EarningsTabPageState extends State<EarningsTabPage> {
 
           //earnings
           Container(
-            color: Colors.black,
+            color: Colors.white,
             width: double.infinity,
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 80),
               child: Column(
                 children: [
 
-                  const Text(
-                    "your Earnings:",
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 16,
+                  Text(
+                    "Your Earnings:",
+                    style: GoogleFonts.josefinSans(
+                      color: Colors.black87,
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold
                     ),
                   ),
 
                   const SizedBox(height: 10,),
 
                   Text(
-                    "\$ " + Provider.of<AppInfo>(context, listen: false).driverTotalEarnings,
-                    style: const TextStyle(
-                      color: Colors.grey,
-                      fontSize: 60,
-                      fontWeight: FontWeight.bold,
+                    "RM " + Provider.of<AppInfo>(context, listen: false).driverTotalEarnings,
+                    style: GoogleFonts.aBeeZee(
+                      color: Colors.black54,
+                      fontSize: 40,
+                      fontStyle: FontStyle.italic
                     ),
                   ),
 
@@ -78,10 +77,12 @@ class _EarningsTabPageState extends State<EarningsTabPage> {
                       width: 6,
                     ),
 
-                    const Text(
+                    Text(
                       "Trips Completed",
-                      style: TextStyle(
-                        color: Colors.black54,
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.openSans(
+                        color: Colors.black87,
+                        fontWeight: FontWeight.bold
                       ),
                     ),
 
@@ -98,13 +99,10 @@ class _EarningsTabPageState extends State<EarningsTabPage> {
                         ),
                       ),
                     ),
-
-
                   ],
                 ),
               ),
           ),
-
         ],
       ),
     );

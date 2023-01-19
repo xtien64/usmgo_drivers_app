@@ -8,7 +8,7 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import '../dialog/policy_dialog.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -93,18 +93,18 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(
                 height: 10,
               ),
-              const Text(
+              Text(
                 "Login as a Driver",
-                style: TextStyle(
+                style: GoogleFonts.josefinSans(
                   fontSize: 26,
-                  color: Colors.grey,
+                  color: Colors.black,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               TextField(
                 controller: emailTextEditingController,
                 keyboardType: TextInputType.emailAddress,
-                style: const TextStyle(color: Colors.grey),
+                style: const TextStyle(color: Colors.black),
                 decoration: const InputDecoration(
                   labelText: "Email",
                   hintText: "Email",
@@ -115,11 +115,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     borderSide: BorderSide(color: Colors.grey),
                   ),
                   hintStyle: TextStyle(
-                    color: Colors.grey,
+                    color: Colors.black54,
                     fontSize: 10,
                   ),
                   labelStyle: TextStyle(
-                    color: Colors.grey,
+                    color: Colors.black54,
                     fontSize: 14,
                   ),
                 ),
@@ -128,7 +128,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 controller: passwordTextEditingController,
                 keyboardType: TextInputType.text,
                 obscureText: true,
-                style: const TextStyle(color: Colors.grey),
+                style: const TextStyle(color: Colors.black),
                 decoration: const InputDecoration(
                   labelText: "Password",
                   hintText: "Password",
@@ -139,11 +139,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     borderSide: BorderSide(color: Colors.grey),
                   ),
                   hintStyle: TextStyle(
-                    color: Colors.grey,
+                    color: Colors.black54,
                     fontSize: 10,
                   ),
                   labelStyle: TextStyle(
-                    color: Colors.grey,
+                    color: Colors.black54,
                     fontSize: 14,
                   ),
                 ),
@@ -156,20 +156,20 @@ class _LoginScreenState extends State<LoginScreen> {
                   validateForm();
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.lightGreenAccent,
+                  primary: Colors.blueAccent,
                 ),
                 child: const Text(
                   "Login",
                   style: TextStyle(
-                    color: Colors.black54,
+                    color: Colors.white,
                     fontSize: 18,
                   ),
                 ),
               ),
               TextButton(
                 child: const Text(
-                  "Do not have an Account? SignUp Here",
-                  style: TextStyle(color: Colors.grey),
+                  "Do not have an Account? SIGH UP HERE",
+                  style: TextStyle(color: Colors.black54),
                 ),
                 onPressed: () {
                   Navigator.push(context,
@@ -185,55 +185,57 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Center(
                       child: Text.rich(TextSpan(
                           text: 'By continuing, you agree to our ',
-                          style: TextStyle(fontSize: 12, color: Colors.black),
+                          style: TextStyle(fontSize: 14, color: Colors.black),
                           children: <TextSpan>[
-                        TextSpan(
-                            text: 'Terms of Service',
-                            style: const TextStyle(
-                              fontSize: 14,
-                              color: Colors.black,
-                              decoration: TextDecoration.underline,
-                            ),
-                            recognizer: TapGestureRecognizer()
-                              ..onTap = () {
-                                // Navigator.push(
-                                //     context,
-                                //     MaterialPageRoute(
-                                //         builder: (_) => MyHomePage()));
-                                // code to open / launch terms of service link here
-                                showDialog(
-                                  context: context,
-                                  builder: (context) {
-                                    return PolicyDialog(
-                                      mdFileName: 'terms_and_conditions.md',
+                            TextSpan(
+                                text: 'Terms of Service',
+                                style: const TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black,
+                                  decoration: TextDecoration.underline,
+                                ),
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () {
+                                    // Navigator.push(
+                                    //     context,
+                                    //     MaterialPageRoute(
+                                    //         builder: (_) => MyHomePage()));
+                                    // code to open / launch terms of service link here
+                                    showDialog(
+                                      context: context,
+                                      builder: (context) {
+                                        return PolicyDialog(
+                                          mdFileName: 'terms_and_conditions.md',
+                                        );
+                                      },
                                     );
-                                  },
-                                );
-                              }),
-                        TextSpan(
-                            text: ' and ',
-                            style: TextStyle(fontSize: 14, color: Colors.black),
-                            children: <TextSpan>[
-                              TextSpan(
-                                  text: 'Privacy Policy',
-                                  style: TextStyle(
-                                      fontSize: 14,
-                                      color: Colors.black,
-                                      decoration: TextDecoration.underline),
-                                  recognizer: TapGestureRecognizer()
-                                    ..onTap = () {
-                                      // code to open / launch privacy policy link here
-                                      showDialog(
-                                        context: context,
-                                        builder: (context) {
-                                          return PolicyDialog(
-                                            mdFileName: 'privacy_policy.md',
+                                  }),
+                            TextSpan(
+                                text: ' and ',
+                                style: TextStyle(fontSize: 14, color: Colors.black),
+                                children: <TextSpan>[
+                                  TextSpan(
+                                      text: 'Privacy Policy',
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black,
+                                          decoration: TextDecoration.underline),
+                                      recognizer: TapGestureRecognizer()
+                                        ..onTap = () {
+                                          // code to open / launch privacy policy link here
+                                          showDialog(
+                                            context: context,
+                                            builder: (context) {
+                                              return PolicyDialog(
+                                                mdFileName: 'privacy_policy.md',
+                                              );
+                                            },
                                           );
-                                        },
-                                      );
-                                    })
-                            ])
-                      ]))))
+                                        })
+                                ])
+                          ]))))
             ],
           ),
         ),

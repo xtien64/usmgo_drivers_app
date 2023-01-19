@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
 import 'package:smooth_star_rating_nsafe/smooth_star_rating.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import '../global/global.dart';
 import '../infoHandler/app_info.dart';
 
@@ -80,7 +80,7 @@ class _RatingsTabPageState extends State<RatingsTabPage>
   Widget build(BuildContext context)
   {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: Dialog(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(14),
@@ -90,7 +90,7 @@ class _RatingsTabPageState extends State<RatingsTabPage>
           margin: const EdgeInsets.all(8),
           width: double.infinity,
           decoration: BoxDecoration(
-            color: Colors.white54,
+            color: Colors.white24,
             borderRadius: BorderRadius.circular(6),
           ),
           child: Column(
@@ -99,10 +99,11 @@ class _RatingsTabPageState extends State<RatingsTabPage>
 
               const SizedBox(height: 22.0,),
 
-              const Text(
-                "your Ratings:",
-                style: TextStyle(
-                  fontSize: 22,
+              Text(
+                "Your Ratings",
+                style: GoogleFonts.josefinSans(
+                  textStyle: Theme.of(context).textTheme.headline4,
+                  fontSize: 34,
                   letterSpacing: 2,
                   fontWeight: FontWeight.bold,
                   color: Colors.black54,
@@ -119,8 +120,8 @@ class _RatingsTabPageState extends State<RatingsTabPage>
                 rating: ratingsNumber,
                 allowHalfRating: false,
                 starCount: 5,
-                color: Colors.green,
-                borderColor: Colors.green,
+                color: Colors.blue,
+                borderColor: Colors.blue,
                 size: 46,
               ),
 
@@ -128,10 +129,12 @@ class _RatingsTabPageState extends State<RatingsTabPage>
 
               Text(
                 titleStarsRating,
-                style: const TextStyle(
+                style: GoogleFonts.josefinSans(
+                  textStyle: Theme.of(context).textTheme.headline4,
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
-                  color: Colors.green,
+                  fontStyle: FontStyle.italic,
+                  color: Colors.blue,
                 ),
               ),
 

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:provider/provider.dart';
 
 import '../infoHandler/app_info.dart';
@@ -21,11 +23,14 @@ class _TripsHistoryScreenState extends State<TripsHistoryScreen>
   Widget build(BuildContext context)
   {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: const Text(
-          "Trips History"
+        backgroundColor: Colors.blueAccent,
+        title: Text(
+          "Trips History",
+          style: GoogleFonts.aBeeZee(
+            fontWeight: FontWeight.bold
+          ),
         ),
         leading: IconButton(
           icon: const Icon(Icons.close),
