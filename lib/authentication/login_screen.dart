@@ -158,9 +158,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 style: ElevatedButton.styleFrom(
                   primary: Colors.blueAccent,
                 ),
-                child: const Text(
+                child: Text(
                   "Login",
-                  style: TextStyle(
+                  style: GoogleFonts.josefinSans(
                     color: Colors.white,
                     fontSize: 18,
                   ),

@@ -43,7 +43,7 @@ class _CarInfoScreenState extends State<CarInfoScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -63,7 +63,7 @@ class _CarInfoScreenState extends State<CarInfoScreen>
                 "Write Car Details",
                 style: TextStyle(
                   fontSize: 26,
-                  color: Colors.grey,
+                  color: Colors.black,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -71,7 +71,7 @@ class _CarInfoScreenState extends State<CarInfoScreen>
               TextField(
                 controller: carModelTextEditingController,
                 style: const TextStyle(
-                    color: Colors.grey
+                    color: Colors.black
                 ),
                 decoration: const InputDecoration(
                   labelText: "Car Model",
@@ -96,7 +96,7 @@ class _CarInfoScreenState extends State<CarInfoScreen>
               TextField(
                 controller: carNumberTextEditingController,
                 style: const TextStyle(
-                    color: Colors.grey
+                    color: Colors.black
                 ),
                 decoration: const InputDecoration(
                   labelText: "Car Number",

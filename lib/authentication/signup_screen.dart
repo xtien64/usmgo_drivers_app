@@ -217,8 +217,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 obscureText: true,
                 style: const TextStyle(color: Colors.black),
                 decoration: const InputDecoration(
-                  labelText: "Confirm Password",
-                  hintText: "Confirm Password",
+                  labelText: "Re- Enter Password",
+                  hintText: "Password (at least 6 characters)",
                   enabledBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.grey),
                   ),
@@ -256,7 +256,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
               TextButton(
                 child: const Text(
-                  " Already have account? Login Here",
+                  " Already have account? LOGIN HERE",
                   style: TextStyle(color: Colors.black54),
                 ),
                 onPressed: () {

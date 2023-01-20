@@ -13,8 +13,6 @@ class InfoDesignUIWidget extends StatefulWidget
 }
 
 
-
-
 class _InfoDesignUIWidgetState extends State<InfoDesignUIWidget>
 {
   @override

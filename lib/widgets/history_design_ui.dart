@@ -58,7 +58,7 @@ class _HistoryDesignUIWidgetState extends State<HistoryDesignUIWidget>
                 const SizedBox(width: 12,),
 
                 Text(
-                  "\$ " + widget.tripsHistoryModel!.fareAmount!,
+                  "RM " + widget.tripsHistoryModel!.fareAmount!,
                   style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,

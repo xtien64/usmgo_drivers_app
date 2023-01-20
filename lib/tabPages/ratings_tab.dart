@@ -8,8 +8,6 @@ import 'package:google_fonts/google_fonts.dart';
 import '../global/global.dart';
 import '../infoHandler/app_info.dart';
 
-
-
 class RatingsTabPage extends StatefulWidget
 {
   const RatingsTabPage({Key? key}) : super(key: key);
@@ -17,9 +15,6 @@ class RatingsTabPage extends StatefulWidget
   @override
   State<RatingsTabPage> createState() => _RatingsTabPageState();
 }
-
-
-
 
 class _RatingsTabPageState extends State<RatingsTabPage>
 {
@@ -81,67 +76,59 @@ class _RatingsTabPageState extends State<RatingsTabPage>
   {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Dialog(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(14),
-        ),
-        backgroundColor: Colors.white60,
-        child: Container(
-          margin: const EdgeInsets.all(8),
-          width: double.infinity,
-          decoration: BoxDecoration(
-            color: Colors.white24,
-            borderRadius: BorderRadius.circular(6),
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
+      body: SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
 
-              const SizedBox(height: 22.0,),
+            const SizedBox(height: 50.0,),
 
-              Text(
-                "Your Ratings",
-                style: GoogleFonts.josefinSans(
-                  textStyle: Theme.of(context).textTheme.headline4,
-                  fontSize: 34,
-                  letterSpacing: 2,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black54,
-                ),
+            Text(
+              "Your Ratings",
+              style: GoogleFonts.josefinSans(
+                textStyle: Theme.of(context).textTheme.headline4,
+                fontSize: 34,
+                letterSpacing: 2,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
               ),
+            ),
 
-              const SizedBox(height: 22.0,),
+            const SizedBox(height: 22.0,),
 
-              const Divider(height: 4.0, thickness: 4.0,),
+            const Divider(height: 4.0, thickness: 4.0,),
 
-              const SizedBox(height: 22.0,),
+            const SizedBox(height: 22.0,),
 
-              SmoothStarRating(
-                rating: ratingsNumber,
-                allowHalfRating: false,
-                starCount: 5,
-                color: Colors.blue,
-                borderColor: Colors.blue,
-                size: 46,
+            SmoothStarRating(
+              rating: ratingsNumber,
+              allowHalfRating: false,
+              starCount: 5,
+              color: Colors.blueAccent,
+              borderColor: Colors.blueAccent,
+              size: 46,
+            ),
+
+            const SizedBox(height: 12.0,),
+
+            Text(
+              titleStarsRating,
+              style: GoogleFonts.josefinSans(
+                textStyle: Theme.of(context).textTheme.headline4,
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.italic,
+                color: Colors.blueAccent,
               ),
+            ),
 
-              const SizedBox(height: 12.0,),
+            const SizedBox(height: 100.0,),
 
-              Text(
-                titleStarsRating,
-                style: GoogleFonts.josefinSans(
-                  textStyle: Theme.of(context).textTheme.headline4,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  fontStyle: FontStyle.italic,
-                  color: Colors.blue,
-                ),
-              ),
-
-              const SizedBox(height: 18.0,),
-
-            ],
-          ),
+            Align(
+              alignment: Alignment.bottomRight,
+              child: Image.asset('images/driver.png'),
+            )
+          ],
         ),
       ),
     );
