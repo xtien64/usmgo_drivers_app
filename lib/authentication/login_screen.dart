@@ -168,7 +168,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               TextButton(
                 child: const Text(
-                  "Do not have an Account? SIGH UP HERE",
+                  "Do not have an Account? SignUp Here",
                   style: TextStyle(color: Colors.black54),
                 ),
                 onPressed: () {
@@ -176,66 +176,68 @@ class _LoginScreenState extends State<LoginScreen> {
                       MaterialPageRoute(builder: (c) => SignUpScreen()));
                 },
               ),
-              SizedBox(height: 150),
-              // TermsOfUse(),
 
+              // TermsOfUse()
               Container(
                   alignment: Alignment.center,
-                  padding: EdgeInsets.all(5),
+                  padding: EdgeInsets.only(top: 150.0, bottom: 10.0),
                   child: Center(
-                      child: Text.rich(TextSpan(
-                          text: 'By continuing, you agree to our ',
-                          style: TextStyle(fontSize: 14, color: Colors.black),
-                          children: <TextSpan>[
-                            TextSpan(
-                                text: 'Terms of Service',
-                                style: const TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black,
-                                  decoration: TextDecoration.underline,
-                                ),
-                                recognizer: TapGestureRecognizer()
-                                  ..onTap = () {
-                                    // Navigator.push(
-                                    //     context,
-                                    //     MaterialPageRoute(
-                                    //         builder: (_) => MyHomePage()));
-                                    // code to open / launch terms of service link here
-                                    showDialog(
-                                      context: context,
-                                      builder: (context) {
-                                        return PolicyDialog(
-                                          mdFileName: 'terms_and_conditions.md',
+                      child: RichText(
+                          textAlign: TextAlign.center,
+                          text: TextSpan(
+                              text: 'By continuing, you agree to our ',
+                              style: TextStyle(
+                                  fontSize: 14, color: Colors.black54),
+                              children: <TextSpan>[
+                                TextSpan(
+                                    text: 'Terms of Service',
+                                    style: const TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black,
+                                      decoration: TextDecoration.underline,
+                                    ),
+                                    recognizer: TapGestureRecognizer()
+                                      ..onTap = () {
+                                        // code to open / launch terms of service link here
+                                        showDialog(
+                                          context: context,
+                                          builder: (context) {
+                                            return PolicyDialog(
+                                              mdFileName:
+                                                  'terms_and_conditions.md',
+                                            );
+                                          },
                                         );
-                                      },
-                                    );
-                                  }),
-                            TextSpan(
-                                text: ' and ',
-                                style: TextStyle(fontSize: 14, color: Colors.black),
-                                children: <TextSpan>[
-                                  TextSpan(
-                                      text: 'Privacy Policy',
-                                      style: TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black,
-                                          decoration: TextDecoration.underline),
-                                      recognizer: TapGestureRecognizer()
-                                        ..onTap = () {
-                                          // code to open / launch privacy policy link here
-                                          showDialog(
-                                            context: context,
-                                            builder: (context) {
-                                              return PolicyDialog(
-                                                mdFileName: 'privacy_policy.md',
+                                      }),
+                                TextSpan(
+                                    text: ' and ',
+                                    style: TextStyle(
+                                        fontSize: 14, color: Colors.black),
+                                    children: <TextSpan>[
+                                      TextSpan(
+                                          text: 'Privacy Policy',
+                                          style: TextStyle(
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.black54,
+                                              decoration:
+                                                  TextDecoration.underline),
+                                          recognizer: TapGestureRecognizer()
+                                            ..onTap = () {
+                                              // code to open / launch privacy policy link here
+                                              showDialog(
+                                                context: context,
+                                                builder: (context) {
+                                                  return PolicyDialog(
+                                                    mdFileName:
+                                                        'privacy_policy.md',
+                                                  );
+                                                },
                                               );
-                                            },
-                                          );
-                                        })
-                                ])
-                          ]))))
+                                            })
+                                    ])
+                              ]))))
             ],
           ),
         ),

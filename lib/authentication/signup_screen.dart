@@ -123,7 +123,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 controller: nameTextEditingController,
                 style: const TextStyle(color: Colors.black),
                 decoration: const InputDecoration(
-                  labelText: "Name",
+                  labelText: "Full Name",
                   hintText: "Full Name",
                   enabledBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.grey),
@@ -217,8 +217,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 obscureText: true,
                 style: const TextStyle(color: Colors.black),
                 decoration: const InputDecoration(
-                  labelText: "Re- Enter Password",
-                  hintText: "Password (at least 6 characters)",
+                  labelText: "Confirm Password",
+                  hintText: "Confirm Password",
                   enabledBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.grey),
                   ),
@@ -256,7 +256,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
               TextButton(
                 child: const Text(
-                  " Already have account? LOGIN HERE",
+                  " Already have account? Login Here",
                   style: TextStyle(color: Colors.black54),
                 ),
                 onPressed: () {
@@ -265,66 +265,71 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 },
               ),
 
-              SizedBox(height: 60),
-              // TermsOfUse(),
-
+              // TermsOfUse()
               Container(
                   alignment: Alignment.center,
-                  padding: EdgeInsets.all(5),
+                  padding: EdgeInsets.only(top: 50.0, bottom: 10.0),
                   child: Center(
-                      child: Text.rich(TextSpan(
-                          text: 'By continuing, you agree to our ',
-                          style: TextStyle(fontSize: 14, color: Colors.black),
-                          children: <TextSpan>[
-                        TextSpan(
-                            text: 'Terms of Service',
-                            style: const TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black,
-                              decoration: TextDecoration.underline,
-                            ),
-                            recognizer: TapGestureRecognizer()
-                              ..onTap = () {
-                                // Navigator.push(
-                                //     context,
-                                //     MaterialPageRoute(
-                                //         builder: (_) => MyHomePage()));
-                                // code to open / launch terms of service link here
-                                showDialog(
-                                  context: context,
-                                  builder: (context) {
-                                    return PolicyDialog(
-                                      mdFileName: 'terms_and_conditions.md',
-                                    );
-                                  },
-                                );
-                              }),
-                        TextSpan(
-                            text: ' and ',
-                            style: TextStyle(fontSize: 14, color: Colors.black),
-                            children: <TextSpan>[
-                              TextSpan(
-                                  text: 'Privacy Policy',
-                                  style: TextStyle(
+                      child: RichText(
+                          textAlign: TextAlign.center,
+                          text: TextSpan(
+                              text: 'By continuing, you agree to our ',
+                              style: TextStyle(
+                                  fontSize: 14, color: Colors.black54),
+                              children: <TextSpan>[
+                                TextSpan(
+                                    text: 'Terms of Service',
+                                    style: const TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.black,
-                                      decoration: TextDecoration.underline),
-                                  recognizer: TapGestureRecognizer()
-                                    ..onTap = () {
-                                      // code to open / launch privacy policy link here
-                                      showDialog(
-                                        context: context,
-                                        builder: (context) {
-                                          return PolicyDialog(
-                                            mdFileName: 'privacy_policy.md',
-                                          );
-                                        },
-                                      );
-                                    })
-                            ])
-                      ]))))
+                                      decoration: TextDecoration.underline,
+                                    ),
+                                    recognizer: TapGestureRecognizer()
+                                      ..onTap = () {
+                                        // Navigator.push(
+                                        //     context,
+                                        //     MaterialPageRoute(
+                                        //         builder: (_) => MyHomePage()));
+                                        // code to open / launch terms of service link here
+                                        showDialog(
+                                          context: context,
+                                          builder: (context) {
+                                            return PolicyDialog(
+                                              mdFileName:
+                                                  'terms_and_conditions.md',
+                                            );
+                                          },
+                                        );
+                                      }),
+                                TextSpan(
+                                    text: ' and ',
+                                    style: TextStyle(
+                                        fontSize: 14, color: Colors.black),
+                                    children: <TextSpan>[
+                                      TextSpan(
+                                          text: 'Privacy Policy',
+                                          style: TextStyle(
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.black54,
+                                              decoration:
+                                                  TextDecoration.underline),
+                                          recognizer: TapGestureRecognizer()
+                                            ..onTap = () {
+                                              // code to open / launch privacy policy link here
+                                              showDialog(
+                                                context: context,
+                                                builder: (context) {
+                                                  return PolicyDialog(
+                                                    mdFileName:
+                                                        'privacy_policy.md',
+                                                  );
+                                                },
+                                              );
+                                            })
+                                    ])
+                              ]))))
             ],
           ),
         ),
