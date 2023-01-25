@@ -19,7 +19,7 @@ class _CarInfoScreenState extends State<CarInfoScreen>
   TextEditingController carNumberTextEditingController = TextEditingController();
   TextEditingController carColorTextEditingController = TextEditingController();
 
-  List<String> carTypesList = ["uber-x", "uber-go", "bike"];
+  List<String> carAvailableSeats = ["1", "2", "3","4","5","6"];
   String? selectedCarType;
 
 
@@ -60,10 +60,11 @@ class _CarInfoScreenState extends State<CarInfoScreen>
               const SizedBox(height: 10,),
 
               const Text(
-                "Write Car Details",
+                "Car Details",
                 style: TextStyle(
                   fontSize: 26,
-                  color: Colors.black,
+                  color: Colors.black87
+                  ,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -121,7 +122,7 @@ class _CarInfoScreenState extends State<CarInfoScreen>
               TextField(
                 controller: carColorTextEditingController,
                 style: const TextStyle(
-                    color: Colors.grey
+                    color: Colors.black
                 ),
                 decoration: const InputDecoration(
                   labelText: "Car Color",
@@ -149,7 +150,7 @@ class _CarInfoScreenState extends State<CarInfoScreen>
                 iconSize: 26,
                 dropdownColor: Colors.black,
                 hint: const Text(
-                  "Please choose Car Type",
+                  "Car Available Seats",
                   style: TextStyle(
                     fontSize: 14.0,
                     color: Colors.grey,
@@ -162,7 +163,7 @@ class _CarInfoScreenState extends State<CarInfoScreen>
                     selectedCarType = newValue.toString();
                   });
                 },
-                items: carTypesList.map((car){
+                items: carAvailableSeats.map((car){
                   return DropdownMenuItem(
                     child: Text(
                       car,
@@ -186,12 +187,12 @@ class _CarInfoScreenState extends State<CarInfoScreen>
                   }
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.lightGreenAccent,
+                  primary: Colors.blue,
                 ),
                 child: const Text(
                   "Save Now",
                   style: TextStyle(
-                    color: Colors.black54,
+                    color: Colors.white,
                     fontSize: 18,
                   ),
                 ),
