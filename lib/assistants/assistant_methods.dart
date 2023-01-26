@@ -79,7 +79,7 @@ class AssistantMethods
 
   static double calculateFareAmountFromOriginToDestination(DirectionDetailsInfo directionDetailsInfo)
   {
-    double timeTraveledFareAmountPerMinute = (directionDetailsInfo.duration_value! / 60) * 0.1;
+    /*double timeTraveledFareAmountPerMinute = (directionDetailsInfo.duration_value! / 60) * 0.1;
     double distanceTraveledFareAmountPerKilometer = (directionDetailsInfo.duration_value! / 1000) * 0.1;
 
     //USD
@@ -102,7 +102,9 @@ class AssistantMethods
     else
     {
       return totalFareAmount.truncate().toDouble();
-    }
+    }*/
+    double totalFareAmount = 2;
+    return double.parse(totalFareAmount.toStringAsFixed(1));
   }
 
 

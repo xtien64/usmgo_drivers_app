@@ -106,7 +106,7 @@ class _FareAmountCollectionDialogState extends State<FareAmountCollectionDialog>
                       ),
                     ),
                     Text(
-                      "\$  " + widget.totalFareAmount!.toString(),
+                      "RM" + widget.totalFareAmount!.toString(),
                       style: const TextStyle(
                         fontSize: 20,
                         color: Colors.white,
