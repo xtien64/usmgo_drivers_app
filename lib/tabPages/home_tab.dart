@@ -12,8 +12,6 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-import '../assistants/black_theme_google_map.dart';
-
 
 class HomeTabPage extends StatefulWidget {
   const HomeTabPage({Key? key}) : super(key: key);
@@ -122,9 +120,6 @@ class _HomeTabPageState extends State<HomeTabPage>
           {
             _controllerGoogleMap.complete(controller);
             newGoogleMapController = controller;
-
-            //black theme google map
-            blackThemeGoogleMap(newGoogleMapController);
 
             locateDriverPosition();
           },
